@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:text="张起灵" />
+            
+            <TextView
+                android:id="@+id/phone_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/grey"
+                android:singleLine="true"
+                android:text="18677885566" />
+            
+            <!--<TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/mine_address_list_item_type_shape"
+                android:textColor="@color/pink"
+                android:singleLine="true"
+                android:textSize="10sp"
+                android:text="生活圈" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" >
+
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无锡市滨湖区滴翠路100号530大厦" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/selected_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/common_position_active" />
+
+</LinearLayout>

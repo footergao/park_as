@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.hdzx.tenement"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gray"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:text="确定"
+            android:textColor="#ef6e5a" />
+
+        <ImageView
+            android:id="@+id/service_image_id"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/service_name_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/service_image_id"
+            android:textColor="#ef6e5a" 
+            android:textSize="14sp"
+            android:text="" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+        
+        <LinearLayout
+            android:id="@+id/pop_content_id"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+	
+	    </LinearLayout>
+	    
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+    
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 嗨抢主界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <include
+            layout="@layout/tenement_navitationbar"/>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+        <Button
+                android:id="@+id/btn_seckill_express_post"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:text="@string/txt_seckill_express_post"
+                android:background="@color/white"
+                android:textColor="@color/pink"/>
+        <Button
+                android:id="@+id/btn_seckill_express_send"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:text="@string/txt_seckill_express_send"
+                android:background="@color/white"
+                android:textColor="@color/pink"/>
+        <Button
+                android:id="@+id/btn_seckill_express_clean"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:text="@string/txt_seckill_express_clean"
+                android:background="@color/white"
+                android:textColor="@color/pink"/>
+        <Button
+                android:id="@+id/btn_seckill_express_babysitter"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:text="@string/txt_seckill_express_babysitter"
+                android:background="@color/white"
+                android:textColor="@color/pink"/>
+        <Button
+                android:id="@+id/btn_seckill_express_cook"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:text="@string/txt_seckill_express_cook"
+                android:background="@color/white"
+                android:textColor="@color/pink"/>
+        <ImageButton
+                android:id="@+id/btn_seckill_more"
+                android:layout_width="0dp" android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:src="@drawable/more"
+                android:scaleType="center"
+                android:background="@color/white"
+                android:onClick="onClick"/>
+    </LinearLayout>
+
+    <View
+            android:id="@+id/rowline"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:shadowColor="@color/white" />
+
+    <ListView
+            android:id="@+id/seckill_lsit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/gray"
+            android:dividerHeight="5dp">
+    </ListView>
+
+</LinearLayout>

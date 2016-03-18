@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_audio"
+    android:layout_width="60dp"
+    android:layout_height="24dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/common_button_drawable"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:visibility="gone"
+  >
+
+    <TextView
+        android:id="@+id/tv_video_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:src="@drawable/aliwx_chatfrom_play_r03"
+        android:id="@+id/img_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

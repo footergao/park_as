@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello tenement!</string>
+    <string name="app_name">智慧园区</string>
+    <string name="up">绑定sdk</string>
+    <string name="down">解绑sdk</string>
+    <string name="no_clientid">(none)</string>
+    <string name="start">启动</string>
+    <string name="stop">停止</string>
+    <string name="clear">清除日志</string>
+    <string name="enablelog">开启debug日志</string>
+    <string name="bindcell">绑定手机号</string>
+    <string name="pmsg">透传测试</string>
+    <string name="psmsg">通知栏测试</string>
+    <string name="begin">开始(h)</string>
+    <string name="end">结束</string>
+    <string name="duration">持续时间(h)</string>
+    <string name="set_heartbeat">心跳间隔(s)</string>
+    <string name="send_msg">发送消息</string>
+    <string name="bind_alias">绑定别名</string>
+    <string name="unbind_alias">解除别名绑定</string>
+    <string name="app_picker_name">Applications</string>
+    <string name="bookmark_picker_name">Bookmarks</string>
+    <string name="button_add_calendar">Add to calendar</string>
+    <string name="button_add_contact">Add contact</string>
+    <string name="button_book_search">Book Search</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_custom_product_search">Custom search</string>
+    <string name="button_dial">Dial number</string>
+    <string name="button_email">Send email</string>
+    <string name="button_get_directions">Get directions</string>
+    <string name="button_mms">Send MMS</string>
+    <string name="button_ok">OK</string>
+    <string name="button_open_browser">Open browser</string>
+    <string name="button_product_search">Product search</string>
+    <string name="button_search_book_contents">Search contents</string>
+    <string name="button_share_app">Application</string>
+    <string name="button_share_bookmark">Bookmark</string>
+    <string name="button_share_by_email">Share via email</string>
+    <string name="button_share_by_sms">Share via SMS</string>
+    <string name="button_share_clipboard">Clipboard</string>
+    <string name="button_share_contact">Contact</string>
+    <string name="button_show_map">Show map</string>
+    <string name="button_sms">Send SMS</string>
+    <string name="button_web_search">Web search</string>
+    <string name="button_wifi">Connect to Network</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_location">Geographic coordinates</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_text">Plain text</string>
+    <string name="history_clear_text">Clear history</string>
+    <string name="history_clear_one_history_text">Clear</string>
+    <string name="history_email_title">Barcode Scanner history</string>
+    <string name="history_empty">Empty</string>
+    <string name="history_empty_detail">No barcode scans have been recorded</string>
+    <string name="history_send">Send history</string>
+    <string name="history_title">History</string>
+    <string name="menu_encode_mecard">Use MECARD</string>
+    <string name="menu_encode_vcard">Use vCard</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_history">History</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="msg_bulk_mode_scanned">Bulk mode: barcode scanned and saved</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the
+        device.
+    </string>
+    <string name="msg_default_format">Format</string>
+    <string name="msg_default_meta">Metadata</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="msg_default_time">Time</string>
+    <string name="msg_default_type">Type</string>
+    <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
+    <string name="msg_error">Error</string>
+    <string name="msg_google_books">Google</string>
+    <string name="msg_google_product">Google</string>
+    <string name="msg_intent_failed">Sorry, the requested application could not be launched. The barcode contents may be
+        invalid.
+    </string>
+    <string name="msg_invalid_value">Invalid value</string>
+    <string name="msg_redirect">Redirect</string>
+    <string name="msg_sbc_book_not_searchable">Sorry, this book is not searchable.</string>
+    <string name="msg_sbc_failed">Sorry, the search encountered a problem.</string>
+    <string name="msg_sbc_no_page_returned">No page returned</string>
+    <string name="msg_sbc_page">Page</string>
+    <string name="msg_sbc_results">Results</string>
+    <string name="msg_sbc_searching_book">Searching book\u2026</string>
+    <string name="msg_sbc_snippet_unavailable">Snippet not available</string>
+    <string name="msg_share_explanation">You can share data by displaying a barcode on your screen and scanning it with
+        another phone.
+    </string>
+    <string name="msg_share_text">Or type some text and press Enter</string>
+    <string name="msg_sure">Are you sure?</string>
+    <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
+    <string name="preferences_actions_title">When a barcode is found\u2026</string>
+    <string name="preferences_auto_focus_title">Use auto focus</string>
+    <string name="preferences_auto_open_web_title">Open web pages automatically</string>
+    <string name="preferences_bulk_mode_summary">Scan and save many barcodes continuously</string>
+    <string name="preferences_bulk_mode_title">Bulk scan mode</string>
+    <string name="preferences_copy_to_clipboard_title">Copy to clipboard</string>
+    <string name="preferences_custom_product_search_summary" formatted="false">Substitutions: %s = contents, %f =
+        format, %t = type
+    </string>
+    <string name="preferences_custom_product_search_title">Custom search URL</string>
+    <string name="preferences_decode_1D_industrial_title">1D Industrial</string>
+    <string name="preferences_decode_1D_product_title">1D Product</string>
+    <string name="preferences_decode_Aztec_title">Aztec</string>
+    <string name="preferences_decode_Data_Matrix_title">Data Matrix</string>
+    <string name="preferences_decode_PDF417_title">PDF417 (β)</string>
+    <string name="preferences_decode_QR_title">QR Codes</string>
+    <string name="preferences_device_bug_workarounds_title">Device Bug Workarounds</string>
+    <string name="preferences_disable_barcode_scene_mode_title">No barcode scene mode</string>
+    <string name="preferences_disable_continuous_focus_summary">Use only standard focus mode</string>
+    <string name="preferences_disable_continuous_focus_title">No continuous focus</string>
+    <string name="preferences_disable_exposure_title">No exposure</string>
+    <string name="preferences_disable_metering_title">No metering</string>
+    <string name="preferences_front_light_summary">Improves scanning in low light on some phones, but may cause glare.
+        Does not work on all phones.
+    </string>
+    <string name="preferences_front_light_title">Use front light</string>
+    <string name="preferences_front_light_auto">Automatic</string>
+    <string name="preferences_front_light_off">Off</string>
+    <string name="preferences_front_light_on">On</string>
+    <string name="preferences_general_title">General settings</string>
+    <string name="preferences_history_summary">Store your scans in History</string>
+    <string name="preferences_history_title">Add to History</string>
+    <string name="preferences_invert_scan_title">Invert scan</string>
+    <string name="preferences_invert_scan_summary">Scan for white barcodes on black background. Not available on some
+        devices.
+    </string>
+    <string name="preferences_name">Settings</string>
+    <string name="preferences_orientation_title">No automatic rotation</string>
+    <string name="preferences_play_beep_title">Beep</string>
+    <string name="preferences_remember_duplicates_summary">Store multiple scans of the same barcode in History</string>
+    <string name="preferences_remember_duplicates_title">Remember duplicates</string>
+    <string name="preferences_result_title">Result settings</string>
+    <string name="preferences_scanning_title">When scanning for barcodes, decode\u2026</string>
+    <string name="preferences_search_country">Search country</string>
+    <string name="preferences_supplemental_summary">Try to retrieve more information about the barcode contents</string>
+    <string name="preferences_supplemental_title">Retrieve more info</string>
+    <string name="preferences_vibrate_title">Vibrate</string>
+    <string name="result_address_book">Found contact info</string>
+    <string name="result_calendar">Found calendar event</string>
+    <string name="result_email_address">Found email address</string>
+    <string name="result_geo">Found geographic coordinates</string>
+    <string name="result_isbn">Found book</string>
+    <string name="result_product">Found product</string>
+    <string name="result_sms">Found SMS address</string>
+    <string name="result_tel">Found phone number</string>
+    <string name="result_text">Found plain text</string>
+    <string name="result_uri">Found URL</string>
+    <string name="result_wifi">Found WLAN Configuration</string>
+    <string name="sbc_name">Google Book Search</string>
+    <string name="wifi_changing_network">Requesting connection to network\u2026</string>
+    <string name="online_config">OnlineConfig</string>
+    <string name="make_crash">Make me crash!!</string>
+    <string name="kv_event">K-V Event</string>
+    <string name="normal_event">Event</string>
+    <string name="event_begin">Event Begin</string>
+    <string name="event_end">Event End</string>
+    <string name="event_duration">Value-Type</string>
+    <string name="page_stack">Page in Fragment Stack</string>
+    <string name="page_tabs">Page in Fragment Tabs</string>
+    <string name="social_analytics">Social Analytics</string>
+    <string name="js_in_webview">JS Analytics in Webivew</string>
+    <string name="flush_cache">send cache message ,right now !</string>
+
+    <string name="common_colon_ch">：</string>
+
+    <string name="modify">修改</string>
+    <string name="delete">删除</string>
+
+    <!-- 应用 -->
+    <!-- 登录，注册 -->
+    <string name="txt_login">登录</string>
+    <string name="txt_regist">注册</string>
+    <string name="txt_logout">注销</string>
+    <string name="txt_mobile">请输入你的手机号码</string>
+    <string name="txt_username">用户名</string>
+    <string name="txt_password">密码</string>
+    <string name="txt_verify">请输入验证码</string>
+    <string name="txt_getverify">获取验证码</string>
+    <string name="txt_login_now">立即登录</string>
+    <string name="txt_regist_now">立即注册</string>
+    <string name="txt_forget_password">忘记密码</string>
+    <string name="txt_retrieve_password">找回密码</string>
+    <string name="txt_newpassword">请输入新密码</string>
+    <string name="txt_update_sure">确认修改</string>
+    <string name="txt_update_submit">提交申请</string>
+
+    <!-- 首页 -->
+    <string name="txt_main">首页</string>
+    <string name="txt_accesscontrol">门禁管理</string>
+    <string name="txt_express">快递收发</string>
+    <string name="txt_tenementpay">物业缴费</string>
+    <string name="txt_rent">租借工具</string>
+    <string name="txt_mutualaid">社区互助</string>
+    <string name="txt_phone">便民电话</string>
+    <string name="txt_consultation">物业咨询</string>
+    <string name="txt_all">全部</string>
+    
+    
+    <string name="txt_sqhz">社区互助</string>
+    <string name="txt_kdsf">快递收发</string>
+    <string name="txt_jjwx">家居维修</string>
+    <string name="txt_sjkm">手机开门</string>
+    <string name="txt_bmdh">便民电话</string>
+    <string name="txt_tsjy">投诉建议</string>
+    <string name="txt_kdcx">快递查询</string>
+    <string name="txt_jzfw">家政服务</string>
+
+    <!-- 帮帮乐 -->
+    <string name="txt_bangbang">帮帮乐</string>
+    <string name="txt_bangbangxia">帮帮侠</string>
+
+    <!-- 社区通 -->
+    <string name="txt_shequtong">社区通</string>
+
+    <!-- 活动汇 -->
+    <string name="txt_activity">活动汇</string>
+    
+    <!-- 品牌街 -->
+    <string name="txt_shop">品牌街</string>
+
+    <!-- 我的 -->
+    <string name="txt_myself">我的</string>
+
+    <!-- 消息圈 -->
+    <string name="txt_messagecircle">消息圈</string>
+    <string name="txt_messagedetails">查看详情</string>
+    <string name="txt_sumbit">确认开启</string>
+
+    <!-- 快递收发 -->
+    <string name="txt_express_send">寄件申请</string>
+    <string name="txt_express_rec">代收快递</string>
+    <string name="txt_express_note">通知手机管理</string>
+    <string name="txt_express_sendreciveinfo">寄件申请</string>
+    <string name="txt_express_sendreciveinfo_info">上门取件信息</string>
+    <string name="txt_express_sendpep_info">寄件人信息</string>
+    <string name="txt_express_receivepep_info">收件人信息</string>
+    <string name="txt_express_sendpep_info_name">请输入寄件人姓名</string>
+    <string name="txt_express_receivepep_info_name">请输入收件人姓名</string>
+    <string name="txt_express_sendpep_info_phone">请输入联系方式</string>
+    <string name="txt_express_sendpep_info_address">请选择所在地区</string>
+    <string name="txt_express_sendpep_info_address_detail">请输入详细地址</string>
+    <string name="txt_express_sendreciveinfo_info_name">申请人</string>
+    <string name="txt_express_sendreciveinfo_info_phone">联系方式</string>
+    <string name="txt_express_sendreciveinfo_info_address">所在地区</string>
+    <string name="txt_express_sendreciveinfo_info_address_detail">详细地址</string>
+    <string name="txt_express_sendreciveinfo_info_address2">选择上门地址</string>
+    <string name="txt_express_sendreciveinfo_info_time">取件时间</string>
+    <string name="txt_express_sendreciveinfo_next">下一步</string>
+    <string name="txt_express_waitreceive">待收快件</string>
+    <string name="txt_express_waitreceive_order">订单编号</string>
+    <string name="txt_express_phonemanage_phonenum">可接收快递消息的其他号码</string>
+    <string name="txt_express_phonemanage_know">我知道了</string>
+    <string name="txt_express_phonemanage_add">添加其他号码</string>
+    <string name="txt_express_phonemanage_whyadd">为什么要添加？</string>
+    <string name="txt_express_phonemanage_add_name">请输入备注姓名</string>
+    <string name="txt_express_phonemanage_add_phone">请输入您的手机号码</string>
+    <string name="txt_express_phonemanage_add_submit">确认添加</string>
+    <string name="txt_express_phonemanage_edit">修改备注名</string>
+    <string name="txt_express_phonemanage_edit_submit">保存</string>
+    <string name="txt_express_phonemanage_myself">我的</string>
+    <string name="txt_express_scales">收费标准</string>
+    <string name="txt_express_info">快件信息</string>
+    <string name="txt_express_company">寄件快递公司</string>
+    <string name="txt_express_weight">快件重量</string>
+    <string name="txt_express_money">费用</string>
+
+    <!--嗨抢-->
+    <string name="txt_seckill">马上嗨抢</string>
+    <string name="txt_seckill_rob">立即抢单</string>
+    <string name="txt_seckill_servicecharge">服务费用</string>
+    <string name="txt_seckill_integral">可获积分</string>
+    <string name="txt_seckill_yuan">元</string>
+    <string name="txt_seckill_time">时间</string>
+
+    <string name="txt_seckill_express_post">寄件</string>
+    <string name="txt_seckill_express_send">送件</string>
+    <string name="txt_seckill_express_clean">保洁</string>
+    <string name="txt_seckill_express_babysitter">月嫂</string>
+    <string name="txt_seckill_express_cook">做饭</string>
+    <string name="txt_seckill_button">立即抢单</string>
+    <string name="txt_seckill_accept">接受类型</string>
+    <string name="txt_seckill_apply">申请更多服务资格</string>
+    <string name="txt_submit_apply">提交申请</string>
+
+    <string name="txt_placeholder_name">请输入您的真实姓名</string>
+    <string name="txt_placeholder_phone">请输入电话号码</string>
+    <string name="txt_placeholder_paperno">请输入您的身份证号</string>
+    <string name="txt_placeholder_selfintro">请输入200字以内的自我介绍</string>
+    <string name="txt_placeholder_photo">请上传清晰正面免冠大头照</string>
+    <string name="txt_placeholder_photo_example">（示例）</string>
+    <string name="txt_express_service_specification">快递收发服务规范</string>
+
+    <string name="txt_seckill_audit_title">提交申请成功，正在进行审核中！</string>
+    <string name="txt_seckill_audit_message">
+        \u3000\u3000我们将尽快完成审核，审核通过后，外面会通过消息圈和手机短信通知您，请耐心等待！\n\u3000\u3000为了能更好的为其他业主提供服务，服务资格审核通过后，请按照如下的服务规范进行操作。
+    </string>
+    <string name="txt_seckill_apply_revoke">撤销申请</string>
+    <string name="txt_iknow">我知道了</string>
+
+    <string name="txt_seckill_aduit_date">资格审核日期</string>
+    <string name="txt_seckill_valid_date">资格过期日期</string>
+
+    <!--门禁管理-->
+    <string name="txt_door">门禁管理</string>
+    <string name="txt_door_scan">扫描以下二维码进入</string>
+    <string name="txt_door_refresh">立即刷新</string>
+    <string name="txt_door_electronic">电子门禁</string>
+    <string name="txt_door_card">门禁卡</string>
+    <string name="txt_door_per">访客门禁</string>
+    <string name="txt_door_electronicaccesscontrol_starttime">申请时间</string>
+    <string name="txt_door_electronicaccesscontrol_endtime">失效时间</string>
+    <string name="txt_door_electronicaccesscontrol_startup">启动时弹出（查看显示方式）</string>
+    <string name="txt_door_pay">门禁续费</string>
+    <string name="txt_door_hisatory">查看使用记录</string>
+
+    <!-- 选择位置 -->
+    <string name="common_positon_title">选择位置</string>
+    <string name="common_positon_auto_switch_title">自动切换我的生活圈</string>
+    <string name="common_positon_select_area_title">选择生活圈</string>
+    <string name="common_positon_curr_city_title">当前城市：</string>
+    <string name="common_positon_change_city_title">更换</string>
+    <string name="title_activity_select_city">SelectCityActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_selected_city">SelectedCityActivity</string>
+
+    <!-- 我的 -->
+    <!-- 1、我的首页 -->
+    <string name="main_mine_home_my_order_other">嗨单详情</string>
+    <string name="main_mine_home_my_order">我的服务嗨单</string>
+    <string name="main_mine_home_my_shop_order">我的购物订单</string>
+    <string name="main_mine_home_my_area">我的生活圈</string>
+    <string name="main_mine_home_my_adrr">我的地址薄</string>
+    <string name="main_mine_home_my_post">我的帖子</string>
+    <string name="main_mine_home_my_car">我的车辆</string>
+    <string name="main_mine_home_my_top">我的排行榜</string>
+    <string name="main_mine_home_my_integral">我的积分</string>
+    <string name="main_mine_home_my_setting">设置</string>
+    <!-- 2、个人信息 -->
+    <string name="main_mine_person_info_title">个人信息</string>
+    <string name="main_mine_person_info_heander">头像</string>
+    <string name="main_mine_person_info_nick">昵称</string>
+    <string name="main_mine_person_info_birthday">生日</string>
+    <string name="main_mine_person_info_signature">签名</string>
+    <string name="main_mine_person_info_title_authorizen">实名认证</string>
+    <string name="ddx_authorizen">申请咚咚侠</string>
+    <string name="main_mine_person_info_phone">手机号码</string>
+    <string name="main_mine_person_info_name">姓名</string>
+    <string name="main_mine_person_info_sex">性别</string>
+    <string name="main_mine_person_info_certificate">证件号码</string>
+    <string name="main_mine_person_info_authorizen">立即实名认证，享受更多服务！</string>
+    <string name="main_mine_person_name_title">昵称修改</string>
+    <string name="main_mine_person_sex_title">性别</string>
+
+    <!-- 3、地址薄 -->
+    <string name="main_mine_address_title">我的地址薄</string>
+    <string name="main_mine_address_add">添加新的地址</string>
+    <string name="main_mine_address_edit">修改地址</string>
+    <string name="main_mine_address_name">地址</string>
+
+    <!--设置-->
+    <string name="main_mine_setting_security">账户安全</string>
+    <string name="main_mine_setting">设置</string>
+    <string name="main_mine_setting_about">关于</string>
+    <string name="main_mine_setting_security_bindphonenum">绑定手机号码</string>
+    <string name="main_mine_setting_security_changepassword">修改密码</string>
+    <string name="main_mine_setting_security_gesturepassword">手势密码</string>
+    <string name="main_mine_setting_security_fingerprintpassword">TouchiID/指纹密码</string>
+    <string name="main_mine_setting_about_intro">功能介绍</string>
+
+    <string name="main_mine_setting_about_slogan">享帮帮，是一个社区生活方式。</string>
+    <string name="main_mine_setting_about_copyright">北京华夏新丝路科技发展有限公司 版权所有</string>
+    <string name="main_mine_setting_about_copyright_en">Copyright © 2015 Beijing HNS.All Rights Reserved.</string>
+    <string name="main_mine_setting_about_intro_detail">
+        <![CDATA[
+        <p>享帮帮，是一个社区生活方式。</p>
+        <ul>
+            <li>·在家里，可以找人帮你拿快递、修东西、扫地、做饭等。<br/></li>
+            <li>·社区周边的各种优惠信息将为你及时更新。<br/></li>
+            <li>·可以给物业反馈问题、寻求帮助、查看物业通知。<br/></li>
+            <li>·手机开门，通过扫一扫二维码，小区的大门就开了。<br/></li>
+            <li>·活动汇，发布你的活动或者参与社区中的活动。<br/></li>
+            <li>·城市服务，可以快递查询等。<br/></li>
+            <li>·社区互助，你的心情和难题、出游找伴侣、麻将三缺一，在这里都可以发布。<br/></li>
+            <li>·一键变身咚咚侠，你也可以帮其他居民服务赚外快了。<br/></li>
+        </ul>
+        ]]>
+    </string>
+
+    <!--我的车辆-->
+    <string name="main_mine_car">我的车辆</string>
+    <string name="main_mine_add">添加新车辆</string>
+    <!--我的排行榜-->
+    <string name="main_mine_rankinglist">速递榜</string>
+    <string name="main_mine_rankinglist_all">总榜</string>
+    <string name="main_mine_rankinglist_send">送件榜</string>
+    <string name="main_mine_rankinglist_receive">寄件榜</string>
+    <string name="main_mine_rankinglist_minerankingnum">我的排名</string>
+    <string name="main_mine_rankinglist_num">位</string>
+    <string name="main_mine_rankinglist_item">件</string>
+    <!--我的订单-->
+    <string name="main_mine_order_bangbang">帮帮乐</string>
+    <string name="main_mine_order_bangbang_all">全部</string>
+    <string name="main_mine_order_bangbang_complete">未完成</string>
+    <string name="main_mine_order_bangbang_nofinish">已完成</string>
+    <string name="main_mine_order_bangbang_cost">实付款: ￥</string>
+    <string name="main_mine_order_bangbang_cancel">取消订单</string>
+    <string name="main_mine_order_bangbang_nowcost">立即付款</string>
+
+    <!-- 我的生活圈 -->
+    <string name="lifegroup_expand">扩展生活圈</string>
+    <string name="lifegroup_placeholder_name">请输入新生活圈名称</string>
+    <string name="lifegroup_placeholder_phone">请输入手机号码</string>
+    <string name="lifegroup_placeholder_area">请选择省、市</string>
+    <string name="lifegroup_placeholder_community">请选择小区</string>
+    <string name="lifegroup_default_address">设为默认地址</string>
+
+    <!-- 生活圈 -->
+    <string name="txt_life_circle_tip">注：服务生活圈开启表示接收该生活圈的申请</string>
+    <string name="txt_search">查找</string>
+    <string name="txt_my_life_circle">我的生活圈</string>
+    <string name="txt_near_life_circle">附近生活圈</string>
+    <string name="txt_select_cell">选择小区</string>
+    
+   <!--  PullToRefreshTest -->
+	<string name="pull_to_refresh">下拉可以刷新</string>
+	<string name="release_to_refresh">释放立即刷新</string>
+	<string name="refreshing">正在刷新…</string>
+	<string name="not_updated_yet">暂未更新过</string>
+	<string name="updated_at">上次更新于%1$s前</string>
+	<string name="updated_just_now">刚刚更新</string>
+	<string name="time_error">时间有问题</string>
+    
+	<!-- 社区交流 -->
+	<string name="community_my_posts">我的帖子</string>
+	<string name="community_dtl_posts">帖子详情</string>
+	<string name="community_msg_lst">消息列表</string>
+	<string name="community_repair_type">选择设施</string>
+	<string name="mp3">转换mp3</string>
+	
+    <!-- 品牌街 -->
+    <string name="txt_street_personal">私人定制，您的专属</string>
+    <string name="txt_purchase_strategy">选购攻略</string>
+</resources>

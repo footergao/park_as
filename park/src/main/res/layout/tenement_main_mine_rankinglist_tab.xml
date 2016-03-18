@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="10dp"/>
+
+    <!--我的排名-->
+    <LinearLayout
+            android:background="@color/white"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent" android:layout_height="60dp">
+        <TextView
+                android:textColor="@color/black"
+                android:text="@string/main_mine_rankinglist_minerankingnum"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <TextView
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="123"
+                android:textSize="30sp"
+                android:textColor="@color/pink"
+                android:layout_width="0px" android:layout_height="match_parent"/>
+        <TextView
+                android:text="@string/main_mine_rankinglist_num"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="10dp"/>
+
+    <ListView
+            android:id="@+id/lv_main_mine_rankinglist_list"
+            android:background="@color/white"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:divider="@color/grey"
+            android:dividerHeight="1px"/>
+
+</LinearLayout>

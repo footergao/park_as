@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white" android:layout_width="match_parent" android:layout_height="80dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <!--订单-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content" android:layout_height="match_parent">
+                <!--订单编号-->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="@string/txt_express_waitreceive_order"
+                            android:textSize="15sp"/>
+                <!--订单号-->
+                <TextView
+                        android:id="@+id/txt_express_waitreceive_orderid"
+                        android:textSize="25sp"
+                        android:text="111111111111111"
+                        android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <!--状态-->
+            <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:id="@+id/txt_express_waitreceive_orderstatus"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:text="等待评价"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="10dp"></LinearLayout>
+</LinearLayout>

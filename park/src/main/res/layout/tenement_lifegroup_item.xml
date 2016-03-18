@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:paddingTop="15dp" android:paddingRight="20dp"
+              android:paddingBottom="15dp" android:paddingLeft="10dp"
+              android:background="@color/white"
+              android:baselineAligned="false">
+
+    <LinearLayout
+            android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:paddingTop="10dp" android:paddingBottom="10dp">
+        <ImageView
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_word_home"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+        <View android:id="@+id/strut"
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_centerVertical="true"/>
+
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="0dp"
+                android:layout_alignBottom="@+id/strut"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="隐秀苑 第一套"/>
+
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="0dp"
+                android:layout_alignTop="@+id/strut"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="无锡市滨湖区滴翠路100号1702室"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_weight=".5">
+        <ImageView
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_tenement_selected"/>
+    </LinearLayout>
+
+</LinearLayout>

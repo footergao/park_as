@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="明文"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/rsa_string_txt"
+                  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="使用服务私钥加密的密文"/>
+        <EditText android:id="@+id/rsa_encode_txt"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="使用服务公钥解密的明文"/>
+        <EditText android:id="@+id/rsa_decode_txt"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/rsa_code_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="运算"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="输入AES运算明文"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/aes_string_txt"
+                  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:text="AES密文"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/aes_encode_txt"
+                  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:text="AES明文"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/aes_decode_txt"
+                  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button android:id="@+id/aes_code_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AES运算"/>
+</LinearLayout>

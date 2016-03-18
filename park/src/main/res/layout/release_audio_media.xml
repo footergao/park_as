@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/release_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/bangbanggo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+       
+
+        <Button
+            android:id="@+id/btn_loundly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/loundly" />
+
+        <!--max=100,代表它的取值范围是0-100,共101个值;progress=10,代表默认值是10-->
+
+        <SeekBar
+            android:padding="10dp"
+            android:id="@+id/seekbar_def"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_close_dialog"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/icon_close_dialog" />
+
+</LinearLayout>

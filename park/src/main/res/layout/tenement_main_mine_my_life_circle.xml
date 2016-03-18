@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/toptitle" />
+
+    <LinearLayout
+        android:id="@+id/rl_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
+        android:padding="15px" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_now_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_positon_curr_city_title"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:id="@+id/tv_now_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_positon_change_city_title"
+                android:textColor="#ef6e5a"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_next_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/edt_search_life_circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_left_corner"
+            android:padding="@dimen/margin_5"
+            android:textSize="@dimen/commont_txt_content_size" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:background="@drawable/shape_right_corner"
+            android:onClick="onClick"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_5"
+            android:text="@string/txt_search"
+            android:textColor="#ef6e5a"
+            android:textSize="@dimen/commont_txt_content_size" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_my_life_circle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

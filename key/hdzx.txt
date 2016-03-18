@@ -1,0 +1,2 @@
+alias:hdzx
+password:hdzx_admin

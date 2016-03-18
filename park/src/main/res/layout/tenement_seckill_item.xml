@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:background="@color/white">
+
+    <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:baselineAligned="false">
+
+        <LinearLayout
+                android:layout_width="0px" android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/txt_seckill_community"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="隐秀园"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+                <TextView
+                        android:id="@+id/txt_seckill_tag"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/seckill_wrap_tag"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/pink"
+                        android:text="室内装修"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                <!-- 服务费用 -->
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/txt_seckill_servicecharge"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/common_colon_ch"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="2"
+                        android:textColor="@color/pink"/>
+                <TextView
+                        android:id="@+id/txt_seckill_servicecharge"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/txt_seckill_yuan"
+                        android:textColor="@color/grat"/>
+                <!-- 积分 -->
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/txt_seckill_integral"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/common_colon_ch"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:id="@+id/txt_seckill_integral"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="2"
+                        android:textColor="@color/grat"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                <!-- 时间 -->
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/txt_seckill_time"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/common_colon_ch"
+                        android:textColor="@color/grat"/>
+                <TextView
+                        android:id="@+id/txt_seckill_time"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="07月08日 18:00-19:00"
+                        android:textColor="@color/grat"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0px" android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical">
+            <Button
+                    android:id="@+id/btn_secksill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/seckill_btn_rush"
+                    android:text="@string/txt_seckill_button"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:layout_width="fill_parent" android:layout_height="6dp"
+            android:background="@drawable/seckill_repeat_bg_list"/>
+</LinearLayout>

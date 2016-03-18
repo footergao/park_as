@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 嗨抢接受服务类型 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <include
+            layout="@layout/tenement_navitationbar"/>
+
+    <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="60dp"
+            android:paddingLeft="20dp" android:paddingRight="20dp"
+            android:background="@color/white">
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/txt_seckill_accept"
+                android:textColor="@color/pink"
+                android:textSize="18sp"/>
+
+        <ImageButton
+                android:id="@+id/btn_accpet_arrow"
+                android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:src="@drawable/icon_arrow_down"
+                android:layout_alignParentRight="true"
+                android:background="@color/grat"/>
+    </RelativeLayout>
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/grat"/>
+
+    <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:paddingLeft="20dp" android:paddingRight="20dp"
+            android:orientation="horizontal">
+        <!--
+            android:numColumns="auto_fit"(系统自动根据屏幕计算列数)
+            android:stretchMode="columnWidth"(多余的空间平均分配给列宽)
+        -->
+        <GridView
+                android:id="@+id/seckill_service_items"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="20dp"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/seckill_btn_apply"
+            android:layout_width="fill_parent" android:layout_height="50dp"
+            android:layout_marginLeft="20dp" android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/common_button_drawable"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="@string/txt_seckill_apply"/>
+
+</LinearLayout>

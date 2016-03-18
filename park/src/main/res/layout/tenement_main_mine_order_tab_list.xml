@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:background="@color/grey"
+            android:layout_width="match_parent" android:layout_height="10dp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent" android:layout_height="132dp">
+        <!--订单状态-->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent" android:layout_height="35dp">
+            <ImageView
+                    android:src="@drawable/icon_samll_bangbang"
+                    android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView
+                    android:id="@+id/txt_main_mine_order_status"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:text="等待中..."
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            <TextView
+                    android:id="@+id/txt_main_mine_order_statusInfo"
+                    android:gravity="center_vertical|right"
+                    android:text="等待付款"
+                    android:textSize="15sp"
+                    android:textColor="@color/pink"
+                    android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:background="@color/grey"
+                android:layout_width="match_parent" android:layout_height="1dp"/>
+
+        <!--快件收发-->
+        <LinearLayout
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent" android:layout_height="60dp">
+            <TextView
+                    android:id="@+id/txt_main_mine_order_ordertype"
+                    android:gravity="center_vertical"
+                    android:text="快递收发"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            <TextView
+                    android:id="@+id/txt_main_mine_order_ordertypeStatus"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/common_txt_drawable"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="送件"
+                    android:textColor="@color/pink"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+                android:background="@color/grey"
+                android:layout_width="match_parent" android:layout_height="1dp"/>
+
+        <LinearLayout
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent" android:layout_height="35dp">
+            <TextView
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="@string/main_mine_order_bangbang_cost"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            <TextView
+                    android:id="@+id/txt_main_mine_order_cost"
+                    android:text="2.00"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content" android:layout_height="match_parent"/>
+            <LinearLayout
+                    android:gravity="right|center_vertical"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/pink"
+                        android:textSize="15sp"
+                        android:text="@string/main_mine_order_bangbang_cancel"
+                        android:background="@drawable/common_txt_drawable"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txt_main_mine_order_cancle"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/pink"
+                        android:textSize="15sp"
+                        android:text="@string/main_mine_order_bangbang_nowcost"
+                        android:background="@drawable/common_txt_drawable"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

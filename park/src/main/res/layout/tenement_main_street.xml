@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:id="@+id/scrollView"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 广告 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_160"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_main_ad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dip"
+                android:gravity="center" >
+
+                <View
+                    android:id="@+id/v_dot0"
+                    style="@style/dot_style"
+                    android:background="@drawable/dot_focused"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/v_dot1"
+                    style="@style/dot_style"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/v_dot2"
+                    style="@style/dot_style"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/v_dot3"
+                    style="@style/dot_style"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/v_dot4"
+                    style="@style/dot_style"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:padding="@dimen/margin_10"
+            android:text="@string/txt_street_personal"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/commont_txt_content_size" />
+
+        <LinearLayout
+            android:id="@+id/ll_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:src="@drawable/main_odds" />
+
+         <com.hdzx.tenement.utils.HorizontalListView
+            android:id="@+id/horizon_listview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp" >
+        </com.hdzx.tenement.utils.HorizontalListView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_10"
+            android:text="@string/txt_purchase_strategy"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/commont_txt_content_size" />
+
+        <LinearLayout
+            android:id="@+id/ll_purchase_strategy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10" >
+
+            <com.hdzx.tenement.utils.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:smoothScrollbar="true"
+                android:verticalSpacing="10dp" >
+            </com.hdzx.tenement.utils.MyGridView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

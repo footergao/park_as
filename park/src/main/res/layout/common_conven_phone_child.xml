@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
+              android:background="@android:color/white"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <TextView android:id="@+id/phone_tv"
+              android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:paddingTop="10dp"
+              android:paddingBottom="10dp"
+              android:gravity="center_vertical"
+              android:text="@string/hello_world"
+              android:textSize="16sp"
+              android:textColor="@color/black"
+              android:drawableRight="@drawable/icon_conven_phone"
+              android:drawablePadding="2dp"/>
+
+</LinearLayout>

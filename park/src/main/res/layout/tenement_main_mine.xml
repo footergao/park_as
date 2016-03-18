@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/main_mine_top_bg" >
+
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.hdzx.tenement.widget.CircleImageView
+                    android:id="@+id/header_imageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/head" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_niker_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+               >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_service_order" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_order"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow style="@style/main_mine_home_table_row_base" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_column="1"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow1_1"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_order" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_shop_order"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_area" />
+
+                    <TextView
+                         android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_area"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+
+                <TableRow
+                    android:id="@+id/mine_address_layout"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_adrr" />
+
+                    <TextView
+                         android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_adrr"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_column="1"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_post" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_post"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                    
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:gravity="top"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/img_new_post"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/aliwx_topbar_at_icon_new"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/main_mine_home_table_row_base"
+                    android:visibility="gone" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_column="1"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    style="@style/main_mine_home_table_row"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_car" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_car"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:visibility="gone" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_column="0"
+                        android:layout_span="3"
+                        android:background="@color/gray" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    style="@style/main_mine_home_table_row"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_top" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_top"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/main_mine_home_table_row_base"
+                    android:visibility="gone" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_column="1"
+                        android:layout_span="2"
+                        android:background="@color/gray" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow7"
+                    style="@style/main_mine_home_table_row"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_integral" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_integral"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_span="3"
+                        android:background="@color/gray" />
+
+                <TableRow
+                    android:id="@+id/tableRow8"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/main_mine_setting" />
+
+                    <TextView
+                         android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/main_mine_home_my_setting"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_span="3"
+                        android:background="@color/gray" />
+
+                <TableRow
+                    android:id="@+id/tr_logout"
+                    style="@style/main_mine_home_table_row" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/my_out_cell_icon" />
+
+                    <TextView
+                         android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/txt_logout"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_column="0"
+                        android:layout_span="3"
+                        android:background="@color/gray" />
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

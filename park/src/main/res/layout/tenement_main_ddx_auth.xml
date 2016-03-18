@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black" >
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/icon_arrow_left" />
+
+        <TextView
+            android:id="@+id/titile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ddx_authorizen"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+
+        <com.hdzx.tenement.widget.ClearFitedEditText
+            android:id="@+id/name_text"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:drawableRight="@drawable/editview_delete_button_select"
+            android:hint="申请内容"
+            android:maxLength="20"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="上传身份证正面照片"
+            android:textColor="@color/pink" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/media_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_media" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/example_headphoto" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="(示例)"
+                    android:textColor="#939393" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/common_button_drawable"
+        android:text="认证"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/tenement_background">
+    <!--title-->
+    <LinearLayout
+            android:id="@+id/lay_main_title" android:layout_width="match_parent"
+            android:layout_height="50dp" android:orientation="horizontal" android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical">
+        <!--返回-->
+        <LinearLayout
+                android:layout_weight="1" android:layout_width="0px" android:layout_height="match_parent"
+                android:gravity="left|center_vertical|right">
+            <LinearLayout
+                    android:id="@+id/lay_express_sendreciveinfo_back"
+                    android:layout_width="90dp" android:layout_height="50dp"
+                    android:onClick="onClick">
+                <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:src="@drawable/icon_arrow_left"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--标题文字-->
+        <LinearLayout
+                android:layout_weight="1" android:layout_width="0px" android:layout_height="match_parent">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txt_main_title"
+                    android:gravity="center"
+                    android:text="@string/txt_express_sendreciveinfo"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_weight="1" android:layout_width="0px" android:layout_height="match_parent">
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--context-->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:background="@color/gray"
+                  android:orientation="vertical">
+        <!--上门取件-->
+        <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" android:layout_width="match_parent" android:layout_height="30dp">
+            <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:text="@string/txt_express_sendreciveinfo_info"
+                    android:textColor="@color/pink"/>
+        </LinearLayout>
+
+        <!--申请人-->
+        <LinearLayout
+                android:onClick="onClick"
+                android:id="@+id/lay_express_sendreciveinfo_address"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="match_parent" android:layout_height="50dp">
+            <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:textColor="@android:color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_express_sendreciveinfo_info_name"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <LinearLayout
+                        android:gravity="right"
+                        android:orientation="horizontal" android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:id="@+id/txt_express_sendreciveinfo_applyname"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                    <ImageView android:src="@drawable/icon_select_messagecircle"
+                               android:layout_width="30dp" android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:background="@color/white" android:layout_width="match_parent" android:layout_height="1dp">
+            <View android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_height="1px" android:background="@color/gray"
+                  android:layout_width="match_parent"></View>
+        </LinearLayout>
+        <!--联系方式-->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="match_parent" android:layout_height="50dp">
+            <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:textColor="@android:color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_express_sendreciveinfo_info_phone"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <LinearLayout
+                        android:gravity="right"
+                        android:orientation="horizontal" android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:id="@+id/txt_express_sendreciveinfo_phone"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                    <ImageView android:src="@drawable/icon_arrow_right"
+                               android:layout_width="30dp" android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:background="@color/white" android:layout_width="match_parent" android:layout_height="1dp">
+            <View android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_height="1px" android:background="@color/gray"
+                  android:layout_width="match_parent"></View>
+        </LinearLayout>
+        <!--所在地区-->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="match_parent" android:layout_height="50dp">
+            <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:textColor="@android:color/black"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:text="@string/txt_express_sendreciveinfo_info_address"
+                        android:layout_width="0px" android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:id="@+id/txt_express_sendreciveinfo_address"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <View android:layout_width="30dp" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--详细地址-->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="match_parent" android:layout_height="50dp">
+            <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:textColor="@android:color/black"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:text="@string/txt_express_sendreciveinfo_info_address_detail"
+                        android:layout_width="0px" android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <View android:layout_width="30dp" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="10dp"></LinearLayout>
+        <!--取件时间-->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="match_parent" android:layout_height="50dp">
+            <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:textColor="@android:color/black"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_express_sendreciveinfo_info_time"
+                        android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <LinearLayout
+                        android:gravity="right"
+                        android:orientation="horizontal" android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:id="@+id/txt_express_sendreciveinfo_time"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                    <ImageView android:src="@drawable/icon_arrow_right"
+                               android:layout_width="30dp" android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--下一步-->
+        <Button
+                android:onClick="onClick"
+                android:id="@+id/btn_express_sendreceiveinfo_next"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent" android:layout_height="45dp"
+                android:textColor="@color/white"
+                android:text="@string/txt_express_sendreciveinfo_next"
+                android:background="@drawable/common_button_drawable"/>
+    </LinearLayout>
+</LinearLayout>

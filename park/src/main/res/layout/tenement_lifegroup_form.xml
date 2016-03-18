@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray">
+
+    <include
+            layout="@layout/tenement_navitationbar"/>
+
+    <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp" android:paddingRight="20dp"
+            android:background="@color/white">
+
+        <EditText
+                android:id="@+id/name"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:paddingTop="15dp" android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:hint="@string/lifegroup_placeholder_name"/>
+        <View
+                android:layout_width="fill_parent" android:layout_height="1px"
+                android:background="@color/gray"/>
+
+        <EditText
+                android:id="@+id/phone"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:paddingTop="15dp" android:paddingBottom="15dp"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:hint="@string/lifegroup_placeholder_phone" />
+        <View
+                android:layout_width="fill_parent" android:layout_height="1px"
+                android:background="@color/gray"/>
+
+        <EditText
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:paddingTop="15dp" android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:hint="@string/lifegroup_placeholder_area"/>
+        <View
+                android:layout_width="fill_parent" android:layout_height="1px"
+                android:background="@color/gray"/>
+
+        <EditText
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:paddingTop="15dp" android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:hint="@string/lifegroup_placeholder_community"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp" android:paddingRight="20dp"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:paddingTop="15dp" android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:textSize="18sp"
+                android:hint="@string/lifegroup_default_address"/>
+    </LinearLayout>
+
+</LinearLayout>

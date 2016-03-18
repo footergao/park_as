@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scrollbars="vertical"
+              android:fadingEdge="vertical">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="账户"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/account_txt"
+                      android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="密码"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/password_txt"
+                      android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/regist_button"
+                    android:text="注册"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/getticket_button"
+                    android:text="登录获取票据"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/loginout_button"
+                    android:text="退出"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/changepassword_button"
+                    android:text="修改密码-需要登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/repassword_button"
+                    android:text="重置密码-无需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/checkemail_button"
+                    android:text="检查邮箱是否存在-无需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/checkid_button"
+                    android:text="检查身份-无需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/checkaccount_button"
+                    android:text="检查登录名-无需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/getbasic_button"
+                    android:text="获取用户主表信息-需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/getbasicinfo_button"
+                    android:text="获取用户全部信息-需登录"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button android:id="@+id/updatebasicinfo_button"
+                android:text="更新用户基本信息-需登录"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/updatebasic_button"
+                android:text="更新用户主表信息-需登录"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/getui_button"
+                android:text="跳转到个推测试"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/cordova_button"
+                android:text="跳转cordova-plguin推测试"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+-->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
+
+    <!-- Allow requests to foo.com -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' foo.com">-->
+
+    <!-- Enable all requests, inline styles, and eval() -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <!-- Allow XHRs via https only -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">-->
+
+    <!-- Allow iframe to https://cordova.apache.org/ -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cordova.apache.org">-->
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova_plugins.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        // Wait for device API libraries to load
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            alert("设备：" + device.model + "----版本：" + device.cordova + "------设备UUID：" + device.uuid
+                    + "-----设备版本：" + device.version + "----设备平台：" + device.platform);
+
+            // Now safe to use device APIs
+
+            //console============================================
+            console.log("console.log works well");
+            //battery============================================
+            window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.addEventListener("batterycritical", onBatteryCritical, false);
+            window.addEventListener("batterylow", onBatteryLow, false);
+            function onBatteryStatus(info) {
+                // Handle the online event
+                console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+            }
+
+            function onBatteryCritical(info) {
+                // Handle the battery critical event
+                alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+            }
+
+            function onBatteryLow(info) {
+                // Handle the battery low event
+                alert("Battery Level Low " + info.level + "%");
+            }
+
+            //network============================================
+            document.getElementById("checkConnection").onclick = function checkConnection() {
+                var networkState = navigator.connection.type;
+
+                var states = {};
+                states[Connection.UNKNOWN] = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI] = 'WiFi connection';
+                states[Connection.CELL_2G] = 'Cell 2G connection';
+                states[Connection.CELL_3G] = 'Cell 3G connection';
+                states[Connection.CELL_4G] = 'Cell 4G connection';
+                states[Connection.CELL] = 'Cell generic connection';
+                states[Connection.NONE] = 'No network connection';
+
+                alert('Connection type: ' + states[networkState]);
+            };
+            //camera============================================
+            console.log(navigator.camera);
+            document.getElementById("capturePhoto").onclick = function capturePhoto() {
+                alert("capturePhoto");
+                if (!navigator.camera) {
+                    alert("Camera API not supported", "Error");
+                    return;
+                }
+                navigator.camera.getPicture(onPhotoDataSuccess, onFail,
+                        {
+                            quality: 50,
+                            allowEdit: true,//编辑框
+                            destinationType: Camera.DestinationType.DATA_URL
+                        });
+            };
+            //source default  Camera.PictureSourceType.CAMERA
+            //不存于本地，出现选择框
+
+            document.getElementById("browsePhoto").onclick = function browsePhoto() {
+                alert("browsePhoto");
+                navigator.camera.getPicture(onPhotoURISuccess, onFail,
+                        {
+                            quality: 50,
+                            destinationType: Camera.DestinationType.FILE_URI,
+                            sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
+                        });
+            };
+            //sourceType Camera.PictureSourceType.PHOTOLIBRARY       浏览图库，选择图片
+            //           Camera.PictureSourceType.SAVEDPHOTOALBUM,
+
+//            { quality : 75,
+//                    destinationType : Camera.DestinationType.DATA_URL,
+//                    sourceType : Camera.PictureSourceType.CAMERA,
+//                    allowEdit : true,
+//                    encodingType: Camera.EncodingType.JPEG,
+//                    targetWidth: 100,
+//                    targetHeight: 100,
+//                    popoverOptions: CameraPopoverOptions,
+//                    saveToPhotoAlbum: false };
+            function onFail(message) {
+                alert('Failed because:' + message);
+            }
+
+            function onPhotoDataSuccess(imageData) {
+                console.log("图片数据生成成功");
+                var smallImage = document.getElementById('smallImage');
+                smallImage.style.display = 'block';
+                smallImage.src = "data:image/jpeg;base64," + imageData;
+            }
+
+            function onPhotoURISuccess(imageURI) {
+                var largeImage = document.getElementById('largeImage');
+                largeImage.style.display = 'block';
+                largeImage.src = imageURI;
+            }
+
+            //contacts-具体查看官方例子
+
+            //device============================================
+            console.log(device.cordova);
+            console.log("device-model:" + device.model);
+            console.log("device-platform:" + device.platform);
+            console.log("device-uuid:" + device.uuid);
+            console.log("device-version:" + device.version);
+            //device-motion============================================
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+            function onSuccess(acceleration) {
+                alert('Acceleration X: ' + acceleration.x + '\n' +
+                        'Acceleration Y: ' + acceleration.y + '\n' +
+                        'Acceleration Z: ' + acceleration.z + '\n' +
+                        'Timestamp: ' + acceleration.timestamp + '\n');
+            }
+
+            function onError() {
+                alert('onError!');
+            }
+
+            var options = {frequency: 3000};  // Update every 3 seconds
+            var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            document.getElementById("clearWatch").onclick = function clearwatchid() {
+                alert("clearWatch");
+                navigator.accelerometer.clearWatch(watchID);
+            };
+            //device-orientation============================================
+            console.log(navigator.compass);
+            function onOrientationSuccess(heading) {
+                alert('Heading: ' + heading.magneticHeading);
+            }
+
+            function onOrientationError(error) {
+                alert('CompassError: ' + error.code);
+            }
+
+            navigator.compass.getCurrentHeading(onOrientationSuccess, onOrientationError);
+//            var options = {
+//                frequency: 3000
+//            }; // Update every 3 seconds
+//            var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+//            navigator.compass.clearWatch(watchID);
+            //device-dialogs============================================
+            console.log(navigator.notification);
+            function alertDismissed() {
+                // do something
+                alert('回调了');
+            }
+
+            document.getElementById("dialogs").onclick = function cordovaalert() {
+                navigator.notification.alert(
+                        'You are the winner!',  // message
+                        alertDismissed,         // callback
+                        'Game Over',            // title
+                        'Done'                  // buttonName
+                );
+            };
+            //file============================================
+            console.log(cordova.file);
+            //geolocation============================================
+            console.log("navigator.geolocation works well");
+            // onSuccess Callback
+            // This method accepts a Position object, which contains the
+            // current GPS coordinates
+            //
+            var onGpsSuccess = function (position) {
+                alert('Latitude: ' + position.coords.latitude + '\n' +
+                        'Longitude: ' + position.coords.longitude + '\n' +
+                        'Altitude: ' + position.coords.altitude + '\n' +
+                        'Accuracy: ' + position.coords.accuracy + '\n' +
+                        'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+                        'Heading: ' + position.coords.heading + '\n' +
+                        'Speed: ' + position.coords.speed + '\n' +
+                        'Timestamp: ' + position.timestamp + '\n');
+            };
+            // onError Callback receives a PositionError object
+            function onGpsError(error) {
+                alert('code: ' + error.code + '\n' +
+                        'message: ' + error.message + '\n');
+            }
+
+//            navigator.geolocation.getCurrentPosition(onGpsSuccess, onGpsError);
+            // Options: throw an error if no update is received every 30 seconds.
+            var watchGpsID = navigator.geolocation.watchPosition(onGpsSuccess, onGpsError, {
+                maximumAge: 3000,
+                timeout: 5000,
+                enableHighAccuracy: true
+            });
+            document.getElementById("clearWatchGps").onclick = function clearWatchGpsId() {
+                alert('clearwatchgpsid');
+                navigator.geolocation.clearWatch(watchGpsID);
+            };
+            //cordova-plugin-file-transfer 查看官方文档============================================
+            //Globalization 查看官方文档
+            //cordova-plugin-media 查看官方文档
+            //cordova-plugin-inappbrowser
+            //vibrate============================================
+//            console.log(navigator.vibrate);
+//            navigator.vibrate(3000);
+
+            //zxing
+            document.getElementById("zxing").onclick = function zixng() {
+                alert('zxing');
+                WebZxing.showzxing();
+            };
+
+            document.getElementById("login").onclick = function login() {
+                TenementApi.login(function () {
+                    alert("success");
+                }, function () {
+                    alert("error");
+                })
+            };
+
+            document.getElementById("token").onclick = function getAccessTicket() {
+                TenementApi.getAccessTicket(function (data) {
+                    alert("success:" + data);
+                }, function (fail) {
+                    alert("error:" + fail)
+                })
+            };
+
+            document.getElementById("imagehost").onclick = function getImageHost() {
+                TenementApi.getImageHost(function (data) {
+                    alert("success:" + data);
+                }, function (fail) {
+                    alert("error:" + fail)
+                })
+            };
+
+            document.getElementById("user").onclick = function getUserInfo() {
+                TenementApi.getUserInfo(function (data) {
+                    alert(data.loginName);
+                    alert(data.lifecircleId);
+                    // 具体内容见UserCoreInfo.java
+                }, function (fail) {
+                    alert("error:" + fail)
+                });
+            };
+
+            document.getElementById("log").onclick = function log() {
+                TenementApi.log("this is appid", "this is appversion", "this is content");
+            };
+
+            document.getElementById("startActivity").onclick = function startActivity() {
+                var param = {
+                };
+                TenementApi.startActivity("com.hdzx.tenement.mine.ui.MineAddressActivity", param, function(data){
+                    alert("success:" + data);
+                }, function(fail) {
+                    alert("error:" + fail)
+                });
+            };
+
+            document.getElementById("back2nature").onclick = function popViewController() {
+                TenementApi.popViewController();
+            };
+
+            document.getElementById("sendRequest").onclick = function sendRequest() {
+                var param = {
+                    "forumId": "2ae3c446d5bd4963bee3b2cd95fc8692",
+                    "updatetime": "20161110060606",
+                    "offset": "0"
+                };
+                TenementApi.sendRequest("bbs/bbsThreads.getMoreThreads.json", param,
+                        function (data) {
+                            alert(data);
+                        }, function (fail) {
+                            alert("error:" + fail)
+                        });
+            };
+
+            document.getElementById("javaCalljs").onclick = function javaCalljs() {
+                console.log("nativeCallJs");
+                TenementApi.nativeCallJs("com.tenement.updateOrderStream", {},
+                        function (data) {
+                            alert(data);
+                        }, function (fail) {
+                            alert("error:" + fail)
+                        });
+            };
+
+            document.getElementById("sendBroadcast").onclick = function sendBroadcast() {
+                TenementApi.sendBroadcast("com.tenement.updateOrderStream", {
+                            "orderId": "598"
+                        },
+                        function (data) {
+                            alert("sendBroadcast" + data);
+                        }, function (fail) {
+                            alert("error:" + fail)
+                        });
+            };
+
+            document.getElementById("tel").onclick = function tel() {
+                alert("tel");
+                TenementApi.phoneDial("15152230658",
+                        function (data) {
+                            alert("phoneCall" + data);
+                        }, function (fail) {
+                            alert("phoneCall error:" + fail)
+                        });
+            };
+
+            document.getElementById("chatting").onclick = function chatting() {
+                alert("tel");
+                TenementApi.chatting("31be742677cf4142a8a05931f9f90912",
+                        function (data) {
+                            alert("chatting" + data);
+                        }, function (fail) {
+                            alert("chatting error:" + fail)
+                        });
+            };
+        }
+
+        function testmm() {
+            alert("axm");
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+<a href="#" data-role="button" id="checkConnection">Check Connection-查看网络</a><br>
+<a href="#" data-role="button" id="capturePhoto">Capture Photo-拍照</a><br>
+<img style="width: 200px;height: 200px" id="smallImage" src=""/>
+
+<p id="smTitle"></p>
+<a href="#" data-role="button" id="browsePhoto">Browse Photo Album-浏览图片</a><br>
+<img style="width: 200px;height: 200px" id="largeImage" src=""/>
+
+<p id="lgTitle"></p>
+<a href="#" data-role="button" id="clearWatch">clearWatch-清除定时设备动作</a><br>
+<a href="#" data-role="button" id="dialogs">dialogs-弹框</a><br>
+<a href="#" data-role="button" id="clearWatchGps">clearWatchGps-清除gps定时动作</a><br>
+<a href="#" data-role="button" id="zxing">zxing-扫描二维码</a><br>
+<a href="#" data-role="button" id="login">跳转至登录</a><br>
+<a href="#" data-role="button" id="token">获取token</a><br>
+<a href="#" data-role="button" id="imagehost">获取imagehost</a><br>
+<a href="#" data-role="button" id="user">获取用户信息</a><br>
+<a href="#" data-role="button" id="log">log日志</a><br>
+<a href="#" data-role="button" id="back2nature">返回原生页面</a><br>
+<a href="#" data-role="button" id="sendRequest">发一个请求</a><br>
+<a href="#" data-role="button" id="startActivity">请求原生activity</a><br>
+<a href="#" data-role="button" id="javaCalljs">javaCalljs</a><br>
+<a href="#" data-role="button" id="sendBroadcast">sendBroadcast</a><br>
+<br/>
+<br/>
+<a href="#" data-role="button" id="tel">teleeeeeeeeeeeeeeeeeeeee</a><br>
+<br/>
+<br/>
+<a href="#" data-role="button" id="chatting">Chattinggggggggggggggggggg</a>
+</body>
+</html>

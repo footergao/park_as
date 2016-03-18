@@ -1,0 +1,259 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From BaseWebViewActivity:
+* build.gradle
+* doc\
+* doc\allclasses-frame.html
+* doc\allclasses-noframe.html
+* doc\com\
+* doc\com\alibaba\
+* doc\com\alibaba\mobileim\
+* doc\com\alibaba\mobileim\IYWLoginService.html
+* doc\com\alibaba\mobileim\IYWP2PPushListener.html
+* doc\com\alibaba\mobileim\IYWTribePushListener.html
+* doc\com\alibaba\mobileim\YWAPI.html
+* doc\com\alibaba\mobileim\YWAccount.html
+* doc\com\alibaba\mobileim\YWIMCore.html
+* doc\com\alibaba\mobileim\channel\
+* doc\com\alibaba\mobileim\channel\event\
+* doc\com\alibaba\mobileim\channel\event\ICommuStateListener.html
+* doc\com\alibaba\mobileim\channel\event\IWxCallback.html
+* doc\com\alibaba\mobileim\channel\event\class-use\
+* doc\com\alibaba\mobileim\channel\event\class-use\ICommuStateListener.html
+* doc\com\alibaba\mobileim\channel\event\class-use\IWxCallback.html
+* doc\com\alibaba\mobileim\channel\event\package-frame.html
+* doc\com\alibaba\mobileim\channel\event\package-summary.html
+* doc\com\alibaba\mobileim\channel\event\package-tree.html
+* doc\com\alibaba\mobileim\channel\event\package-use.html
+* doc\com\alibaba\mobileim\class-use\
+* doc\com\alibaba\mobileim\class-use\IYWLoginService.html
+* doc\com\alibaba\mobileim\class-use\IYWP2PPushListener.html
+* doc\com\alibaba\mobileim\class-use\IYWTribePushListener.html
+* doc\com\alibaba\mobileim\class-use\YWAPI.html
+* doc\com\alibaba\mobileim\class-use\YWAccount.html
+* doc\com\alibaba\mobileim\class-use\YWIMCore.html
+* doc\com\alibaba\mobileim\contact\
+* doc\com\alibaba\mobileim\contact\IYWContact.html
+* doc\com\alibaba\mobileim\contact\IYWContactHeadClickCallback.html
+* doc\com\alibaba\mobileim\contact\IYWContactProfileCallback.html
+* doc\com\alibaba\mobileim\contact\IYWContactService.html
+* doc\com\alibaba\mobileim\contact\IYWCrossContactProfileCallback.html
+* doc\com\alibaba\mobileim\contact\YWContactFactory.html
+* doc\com\alibaba\mobileim\contact\YWContactManager.html
+* doc\com\alibaba\mobileim\contact\class-use\
+* doc\com\alibaba\mobileim\contact\class-use\IYWContact.html
+* doc\com\alibaba\mobileim\contact\class-use\IYWContactHeadClickCallback.html
+* doc\com\alibaba\mobileim\contact\class-use\IYWContactProfileCallback.html
+* doc\com\alibaba\mobileim\contact\class-use\IYWContactService.html
+* doc\com\alibaba\mobileim\contact\class-use\IYWCrossContactProfileCallback.html
+* doc\com\alibaba\mobileim\contact\class-use\YWContactFactory.html
+* doc\com\alibaba\mobileim\contact\class-use\YWContactManager.html
+* doc\com\alibaba\mobileim\contact\package-frame.html
+* doc\com\alibaba\mobileim\contact\package-summary.html
+* doc\com\alibaba\mobileim\contact\package-tree.html
+* doc\com\alibaba\mobileim\contact\package-use.html
+* doc\com\alibaba\mobileim\conversation\
+* doc\com\alibaba\mobileim\conversation\IYWConversationListener.html
+* doc\com\alibaba\mobileim\conversation\IYWConversationService.html
+* doc\com\alibaba\mobileim\conversation\IYWConversationUnreadChangeListener.html
+* doc\com\alibaba\mobileim\conversation\IYWMessageListener.html
+* doc\com\alibaba\mobileim\conversation\YWConversation.html
+* doc\com\alibaba\mobileim\conversation\YWConversationCreater.html
+* doc\com\alibaba\mobileim\conversation\YWConversationManager.html
+* doc\com\alibaba\mobileim\conversation\YWConversationType.html
+* doc\com\alibaba\mobileim\conversation\YWFileManager.html
+* doc\com\alibaba\mobileim\conversation\YWMessage.SUB_MSG_TYPE.html
+* doc\com\alibaba\mobileim\conversation\YWMessage.html
+* doc\com\alibaba\mobileim\conversation\YWMessageChannel.html
+* doc\com\alibaba\mobileim\conversation\YWMessageLoader.html
+* doc\com\alibaba\mobileim\conversation\YWMessageSender.html
+* doc\com\alibaba\mobileim\conversation\class-use\
+* doc\com\alibaba\mobileim\conversation\class-use\IYWConversationListener.html
+* doc\com\alibaba\mobileim\conversation\class-use\IYWConversationService.html
+* doc\com\alibaba\mobileim\conversation\class-use\IYWConversationUnreadChangeListener.html
+* doc\com\alibaba\mobileim\conversation\class-use\IYWMessageListener.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWConversation.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWConversationCreater.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWConversationManager.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWConversationType.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWFileManager.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWMessage.SUB_MSG_TYPE.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWMessage.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWMessageChannel.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWMessageLoader.html
+* doc\com\alibaba\mobileim\conversation\class-use\YWMessageSender.html
+* doc\com\alibaba\mobileim\conversation\package-frame.html
+* doc\com\alibaba\mobileim\conversation\package-summary.html
+* doc\com\alibaba\mobileim\conversation\package-tree.html
+* doc\com\alibaba\mobileim\conversation\package-use.html
+* doc\com\alibaba\mobileim\gingko\
+* doc\com\alibaba\mobileim\gingko\model\
+* doc\com\alibaba\mobileim\gingko\model\tribe\
+* doc\com\alibaba\mobileim\gingko\model\tribe\YWTribe.html
+* doc\com\alibaba\mobileim\gingko\model\tribe\class-use\
+* doc\com\alibaba\mobileim\gingko\model\tribe\class-use\YWTribe.html
+* doc\com\alibaba\mobileim\gingko\model\tribe\package-frame.html
+* doc\com\alibaba\mobileim\gingko\model\tribe\package-summary.html
+* doc\com\alibaba\mobileim\gingko\model\tribe\package-tree.html
+* doc\com\alibaba\mobileim\gingko\model\tribe\package-use.html
+* doc\com\alibaba\mobileim\login\
+* doc\com\alibaba\mobileim\login\IYWConnectionListener.html
+* doc\com\alibaba\mobileim\login\IYWLoginStateCallback.html
+* doc\com\alibaba\mobileim\login\YWLoginCode.html
+* doc\com\alibaba\mobileim\login\YWLoginState.html
+* doc\com\alibaba\mobileim\login\class-use\
+* doc\com\alibaba\mobileim\login\class-use\IYWConnectionListener.html
+* doc\com\alibaba\mobileim\login\class-use\IYWLoginStateCallback.html
+* doc\com\alibaba\mobileim\login\class-use\YWLoginCode.html
+* doc\com\alibaba\mobileim\login\class-use\YWLoginState.html
+* doc\com\alibaba\mobileim\login\package-frame.html
+* doc\com\alibaba\mobileim\login\package-summary.html
+* doc\com\alibaba\mobileim\login\package-tree.html
+* doc\com\alibaba\mobileim\login\package-use.html
+* doc\com\alibaba\mobileim\package-frame.html
+* doc\com\alibaba\mobileim\package-summary.html
+* doc\com\alibaba\mobileim\package-tree.html
+* doc\com\alibaba\mobileim\package-use.html
+* doc\com\alibaba\mobileim\tribe\
+* doc\com\alibaba\mobileim\tribe\IYWTribeService.html
+* doc\com\alibaba\mobileim\tribe\YWTribeManager.html
+* doc\com\alibaba\mobileim\tribe\class-use\
+* doc\com\alibaba\mobileim\tribe\class-use\IYWTribeService.html
+* doc\com\alibaba\mobileim\tribe\class-use\YWTribeManager.html
+* doc\com\alibaba\mobileim\tribe\package-frame.html
+* doc\com\alibaba\mobileim\tribe\package-summary.html
+* doc\com\alibaba\mobileim\tribe\package-tree.html
+* doc\com\alibaba\mobileim\tribe\package-use.html
+* doc\constant-values.html
+* doc\deprecated-list.html
+* doc\help-doc.html
+* doc\index-all.html
+* doc\index.html
+* doc\overview-frame.html
+* doc\overview-summary.html
+* doc\overview-tree.html
+* doc\package-list
+* doc\resources\
+* doc\resources\background.gif
+* doc\resources\tab.gif
+* doc\resources\titlebar.gif
+* doc\resources\titlebar_end.gif
+* doc\serialized-form.html
+* doc\stylesheet.css
+From tenement_as:
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+gson-2.3.1.jar => com.google.code.gson:gson:2.3.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In BaseWebViewActivity:
+* AndroidManifest.xml => baseWebViewActivity\src\main\AndroidManifest.xml
+* assets\ => baseWebViewActivity\src\main\assets
+* libs\alisdk-hotpatch-3.jar => baseWebViewActivity\libs\alisdk-hotpatch-3.jar
+* libs\alisdk-kernel-2.0.0.jar => baseWebViewActivity\libs\alisdk-kernel-2.0.0.jar
+* libs\alisdk-rpc-3.jar => baseWebViewActivity\libs\alisdk-rpc-3.jar
+* libs\alisdk-security-8.jar => baseWebViewActivity\libs\alisdk-security-8.jar
+* libs\alisdk-system-14.jar => baseWebViewActivity\libs\alisdk-system-14.jar
+* libs\alisdk-ui-6.jar => baseWebViewActivity\libs\alisdk-ui-6.jar
+* libs\alisdk-ut-5.jar => baseWebViewActivity\libs\alisdk-ut-5.jar
+* libs\armeabi-v7a\libcocklogic-1.1.3.so => baseWebViewActivity\src\main\jniLibs\armeabi-v7a\libcocklogic-1.1.3.so
+* libs\armeabi-v7a\libinet.1.9.0.so => baseWebViewActivity\src\main\jniLibs\armeabi-v7a\libinet.1.9.0.so
+* libs\armeabi-v7a\libsecuritysdk-3.1.27.so => baseWebViewActivity\src\main\jniLibs\armeabi-v7a\libsecuritysdk-3.1.27.so
+* libs\armeabi-v7a\libtnet-2.1.24.1-aliyun.so => baseWebViewActivity\src\main\jniLibs\armeabi-v7a\libtnet-2.1.24.1-aliyun.so
+* libs\armeabi\libcocklogic-1.1.3.so => baseWebViewActivity\src\main\jniLibs\armeabi\libcocklogic-1.1.3.so
+* libs\armeabi\libinet.1.9.0.so => baseWebViewActivity\src\main\jniLibs\armeabi\libinet.1.9.0.so
+* libs\armeabi\libsecuritysdk-3.1.27.so => baseWebViewActivity\src\main\jniLibs\armeabi\libsecuritysdk-3.1.27.so
+* libs\armeabi\libtnet-2.1.24.1-aliyun.so => baseWebViewActivity\src\main\jniLibs\armeabi\libtnet-2.1.24.1-aliyun.so
+* libs\cloud-push-sdk-2.0.10.jar => baseWebViewActivity\libs\cloud-push-sdk-2.0.10.jar
+* libs\IMCore-1.9.1.jar => baseWebViewActivity\libs\IMCore-1.9.1.jar
+* libs\IMKit-1.9.1.jar => baseWebViewActivity\libs\IMKit-1.9.1.jar
+* libs\sdk-legacy-support-2.0.0.jar => baseWebViewActivity\libs\sdk-legacy-support-2.0.0.jar
+* libs\securityguard-3.1.27.jar => baseWebViewActivity\libs\securityguard-3.1.27.jar
+* libs\utdid4all-1.0.4.jar => baseWebViewActivity\libs\utdid4all-1.0.4.jar
+* libs\x86\libcocklogic-1.1.3.so => baseWebViewActivity\src\main\jniLibs\x86\libcocklogic-1.1.3.so
+* libs\x86\libinet.1.9.0.so => baseWebViewActivity\src\main\jniLibs\x86\libinet.1.9.0.so
+* libs\x86\libsecuritysdk-3.1.27.so => baseWebViewActivity\src\main\jniLibs\x86\libsecuritysdk-3.1.27.so
+* libs\x86\libtnet-2.1.24.1-aliyun.so => baseWebViewActivity\src\main\jniLibs\x86\libtnet-2.1.24.1-aliyun.so
+* res\ => baseWebViewActivity\src\main\res\
+* src\ => baseWebViewActivity\src\main\java
+In tenement_as:
+* AndroidManifest.xml => tenement_as\src\main\AndroidManifest.xml
+* assets\ => tenement_as\src\main\assets\
+* libs\analytics-5.5.3.jar => tenement_as\libs\analytics-5.5.3.jar
+* libs\android-async-http-1.4.7.jar => tenement_as\libs\android-async-http-1.4.7.jar
+* libs\arm64-v8a\libBaiduMapSDK_v3_5_0_9.so => tenement_as\src\main\jniLibs\arm64-v8a\libBaiduMapSDK_v3_5_0_9.so
+* libs\arm64-v8a\liblocSDK6a.so => tenement_as\src\main\jniLibs\arm64-v8a\liblocSDK6a.so
+* libs\armeabi-v7a\libBaiduMapSDK_v3_5_0_9.so => tenement_as\src\main\jniLibs\armeabi-v7a\libBaiduMapSDK_v3_5_0_9.so
+* libs\armeabi-v7a\liblocSDK6a.so => tenement_as\src\main\jniLibs\armeabi-v7a\liblocSDK6a.so
+* libs\armeabi\libBaiduMapSDK_v3_5_0_9.so => tenement_as\src\main\jniLibs\armeabi\libBaiduMapSDK_v3_5_0_9.so
+* libs\armeabi\liblocSDK6a.so => tenement_as\src\main\jniLibs\armeabi\liblocSDK6a.so
+* libs\baiduLBS_android-5.0.0.jar => tenement_as\libs\baiduLBS_android-5.0.0.jar
+* libs\baidumapapi_v3_5_0.jar => tenement_as\libs\baidumapapi_v3_5_0.jar
+* libs\commons-lang3-3.4.jar => tenement_as\libs\commons-lang3-3.4.jar
+* libs\core-3.2.0.jar => tenement_as\libs\core-3.2.0.jar
+* libs\httpclient-4.5.jar => tenement_as\libs\httpclient-4.5.jar
+* libs\httpcore-4.4.1.jar => tenement_as\libs\httpcore-4.4.1.jar
+* libs\httpmime-4.3.5.jar => tenement_as\libs\httpmime-4.3.5.jar
+* libs\json-simple-1.1.jar => tenement_as\libs\json-simple-1.1.jar
+* libs\kjframe-2.5.5.jar => tenement_as\libs\kjframe-2.5.5.jar
+* libs\locSDK_6.13.jar => tenement_as\libs\locSDK_6.13.jar
+* libs\mips64\liblocSDK6a.so => tenement_as\src\main\jniLibs\mips64\liblocSDK6a.so
+* libs\mips\liblocSDK6a.so => tenement_as\src\main\jniLibs\mips\liblocSDK6a.so
+* libs\pinyin4j-2.5.0.jar => tenement_as\libs\pinyin4j-2.5.0.jar
+* libs\smack-core-4.1.1.jar => tenement_as\libs\smack-core-4.1.1.jar
+* libs\smack-im-4.1.1.jar => tenement_as\libs\smack-im-4.1.1.jar
+* libs\smack-tcp-4.1.1.jar => tenement_as\libs\smack-tcp-4.1.1.jar
+* libs\universal-image-loader-1.9.4.jar => tenement_as\libs\universal-image-loader-1.9.4.jar
+* libs\x86\libBaiduMapSDK_v3_5_0_9.so => tenement_as\src\main\jniLibs\x86\libBaiduMapSDK_v3_5_0_9.so
+* libs\x86\liblocSDK6a.so => tenement_as\src\main\jniLibs\x86\liblocSDK6a.so
+* libs\x86_64\libBaiduMapSDK_v3_5_0_9.so => tenement_as\src\main\jniLibs\x86_64\libBaiduMapSDK_v3_5_0_9.so
+* libs\x86_64\liblocSDK6a.so => tenement_as\src\main\jniLibs\x86_64\liblocSDK6a.so
+* res\ => tenement_as\src\main\res\
+* src\ => tenement_as\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的嗨单 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:id="@+id/lay_navitationbar"
+            android:gravity="center_vertical"
+            android:background="@drawable/navitationbar">
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/seckill_lsit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/gray"
+            android:dividerHeight="5dp">
+    </ListView>
+</LinearLayout>

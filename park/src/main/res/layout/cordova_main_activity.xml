@@ -1,0 +1,36 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/tenement_background">
+
+    <LinearLayout
+            android:id="@+id/top_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <include
+                layout="@layout/tenement_navitationbar"/>
+
+        <ProgressBar
+                android:id="@+id/top_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/progress_bar_color"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_title"
+            android:background="@color/white"
+            android:orientation="vertical">
+    </LinearLayout>
+
+</RelativeLayout>

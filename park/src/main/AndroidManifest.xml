@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hdzx.tenement"
+    android:versionCode="1"
+    android:versionName="0.9.3" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <span style="WHITE-SPACE: pre" >
+    </span>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <span style="WHITE-SPACE: pre" >
+    </span>
+    <span style="WHITE-SPACE: pre" >
+    </span>
+    <!-- 往SDCard写入数据权限 -->
+    <span style="WHITE-SPACE: pre" >
+    </span>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- ZXin -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
+    <uses-feature android:name="android.hardware.touchscreen" />
+    <!-- TODO make this not required again after android.hardware.camera.any is available -->
+
+
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+ <!-- alibaba -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+
+    <application
+        android:name="com.hdzx.tenement.MyApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- 登录页面 -->
+        <activity android:name=".ui.common.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 找回密码 -->
+        <activity android:name=".ui.common.RetrievepasswordActivity" >
+        </activity>
+
+        <!-- 首页 -->
+        <activity android:name=".ui.MainActivity" >
+        </activity>
+
+        <!-- cordova界面 -->
+        <activity android:name=".ui.PluginActivity" >
+        </activity>
+
+        <!-- 消息圈 -->
+        <!-- 具体消息 -->
+        <activity android:name="com.hdzx.tenement.message.MessageCircleInfoActivity" >
+        </activity>
+        <!-- 详细信息 -->
+        <activity android:name="com.hdzx.tenement.message.MessageCircleDetailActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.message.MainMessageCircleActivity" >
+        </activity>
+
+        <!-- 应用 -->
+        <!-- 快件收发 -->
+        <activity android:name=".ui.express.ExpressActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请 -->
+        <activity android:name=".ui.express.SendReceiveInfoActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-地址选择 -->
+        <activity android:name=".ui.express.SendReceiveInfoAddressActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-寄件人信息 -->
+        <activity android:name=".ui.express.SendPepInfoActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-收件人信息 -->
+        <activity android:name=".ui.express.ReceivePepInfoActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-提交申请 -->
+        <activity android:name=".ui.express.SendReceiveSalesActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-快递公司列表 -->
+        <activity android:name=".ui.express.ExpressCompanyActivity" >
+        </activity>
+
+        <!-- 快件收发-寄件申请-重量 -->
+        <activity android:name=".ui.express.ExpressWeightActivity" >
+        </activity>
+
+        <!-- 快件收发-待收快件 -->
+        <activity android:name=".ui.express.WaitReceiveActivity" >
+        </activity>
+        <!-- 快件收发-通知手机管理 -->
+        <activity android:name=".ui.express.PhoneManageActivity" >
+        </activity>
+
+        <!-- 快件收发-通知手机管理-添加手机号码 -->
+        <activity android:name=".ui.express.PhoneManageAddActivity" >
+        </activity>
+        <!-- 快件收发-通知手机管理-修改手机号码备注 -->
+        <activity android:name=".ui.express.PhoneManageEditActivity" >
+        </activity>
+
+        <!-- 门禁管理 -->
+        <activity android:name=".ui.door.DoorManageActivity" >
+        </activity>
+
+        <!-- 手机开门 -->
+        <activity android:name="com.hdzx.tenement.community.ui.OpenDoorActivity" >
+        </activity>
+
+        <!-- 手机开门 -->
+        <activity android:name="com.hdzx.tenement.community.ui.ExpressInquiry" >
+        </activity>
+
+        <!-- 门禁管理-电子门禁 -->
+        <activity android:name=".ui.door.ElectronicAccessControlActivity" >
+        </activity>
+
+        <!-- 应用开启关闭服务 -->
+        <service android:name=".service.AppStatusService" />
+
+        <!-- 我的 -->
+        <!-- 我的-设置 -->
+        <activity android:name=".mine.ui.MineSettingActivity" >
+        </activity>
+        <!-- 我的-设置-账户安全 -->
+        <activity android:name=".mine.ui.MineSettingSecurityActivity" >
+        </activity>
+        <!-- 我的车辆 -->
+        <activity android:name=".mine.ui.MineCarActivity" >
+        </activity>
+        <!-- 我的排行 -->
+        <activity android:name=".mine.ui.MineRankingListActivity" >
+        </activity>
+        <!-- 我的订单 -->
+        <activity android:name=".mine.ui.MineOrderActivity" >
+        </activity>
+        <!-- 我的订单-订单详情 -->
+        <activity android:name=".mine.ui.MineOrderDetailActivity" >
+        </activity>
+        <!-- 我的帖子 -->
+        <activity android:name=".mine.ui.MinePostsActivity" >
+        </activity>
+         <!-- 我的订单-订单详情 -->
+        <activity android:name=".mine.ui.MineShopOrderActivity" >
+        </activity>
+        
+
+        <!-- 大图 -->
+        <activity android:name=".ui.common.BigImageActivity" >
+        </activity>
+        <!-- 我的帖子dtl -->
+        <activity
+            android:name=".mine.ui.MinePostsDtlActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <!-- 我的消息列表 -->
+        <activity android:name=".mine.ui.MineMessageLstActivity" >
+        </activity>
+        <!-- bbs版块 -->
+        <activity
+            android:name=".mine.ui.ForumPostsActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".mine.ui.ForumTypeActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.hdzx.tenement.mine.ui.WritePostActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 我的——我的生活圈 -->
+        <activity android:name="com.hdzx.tenement.mine.ui.MineLifeCricleActivity" >
+        </activity>
+        <!-- 我的——扩展生活圈 -->
+        <activity android:name="com.hdzx.tenement.mine.ui.AddLifeCricleActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.ui.common.MyLifeCircleActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.SelectCellActivity" >
+        </activity>
+
+        <!-- 个人资料 -->
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoNickActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoSexActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoSignActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoAuthActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.MinePersonInfoMobileActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.mine.ui.DongdongxiaAuthActivity" >
+        </activity>
+
+        <!-- 嗨抢 -->
+        <activity android:name=".ui.seckill.SeckillMainActivity" />
+        <activity android:name=".ui.seckill.SeckillServiceActivity" />
+
+        <!-- 我的地址薄 -->
+        <activity android:name="com.hdzx.tenement.mine.ui.MineAddressActivity" >
+        </activity>
+        <!-- 编辑地址簿 -->
+        <activity android:name="com.hdzx.tenement.mine.ui.MineAddressFormActivity" >
+        </activity>
+
+        <!-- 便民电话 -->
+        <activity android:name="com.hdzx.tenement.community.ui.CommonConvenPhoneListActivity" >
+        </activity>
+
+        <!-- 投诉建议 -->
+        <activity
+            android:name="com.hdzx.tenement.community.ui.CommunitySuggestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.CommunitySuggestLstActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.CommunitySuggestDtlActivity" >
+        </activity>
+        <activity
+            android:name="com.hdzx.tenement.community.ui.CommunitySuggestReplyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 设备报修 -->
+        <activity
+            android:name="com.hdzx.tenement.community.ui.CommunityRepairActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.CommunityRepairLstActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.CommunityRepairDtlActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.RepairTypeActivity" >
+        </activity>
+
+        <!-- 社区通-动态配置模板 -->
+        <activity android:name="com.hdzx.tenement.community.ui.CommonDynamicAcitivity" >
+        </activity>
+        
+           <activity android:name="com.hdzx.tenement.community.ui.ArticleDtlActivity" >
+        </activity>
+        
+        
+
+        <!-- 媒体选择通用界面 -->
+        <activity android:name="com.hdzx.tenement.community.ui.CommonMediaSelectedActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.community.ui.MediaSelectedActivity" >
+        </activity>
+        <activity
+            android:name="com.hdzx.tenement.ui.common.DemandsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.hdzx.tenement.ui.common.RecordActivity" >
+        </activity>
+        <!-- 图片浏览通用界面 -->
+        <activity android:name="com.hdzx.tenement.community.ui.CommonImageViewActivity" >
+        </activity>
+
+        <!-- 关于 -->
+        <activity android:name=".ui.common.AboutActivity" >
+        </activity>
+
+        <!-- 关于-功能介绍 -->
+        <activity android:name=".ui.common.AboutIntroActivity" >
+        </activity>
+        <activity android:name="com.hdzx.tenement.ui.ProductDetailActivity" >
+        </activity>
+
+        <!-- 录音 -->
+        <activity
+            android:name="com.zc.RecordDemo.ConvertActivity"
+            android:label="@string/mp3" >
+        </activity>
+
+        <!-- zxing -->
+        <activity
+            android:name=".zxing.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity android:name=".zxing.encode.EncodeActivity" >
+        </activity>
+
+        <activity android:name=".pay.PayDtlActivity">
+        </activity>
+
+        <!-- umeng test -->
+        <!-- <activity android:name=".umeng.AnalyticsHome"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- <activity android:name=".umeng.WebviewAnalytic"></activity> -->
+
+
+        <!-- rsa test -->
+        <!-- <activity android:name=".RsaTestActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!--
+           <activity
+                   android:name=".test.TestMain"
+                   >
+               <intent-filter>
+                   <action android:name="android.intent.action.MAIN"/>
+
+                   <category android:name="android.intent.category.LAUNCHER"/>
+               </intent-filter>
+           </activity>
+
+
+
+
+        -->
+
+
+        <!-- tcp 测试 -->
+        <activity android:name=".test.TcpTestMain" >
+        </activity>
+
+        <!-- http 测试 -->
+        <activity android:name=".HttpTestActivity" >
+        </activity>
+
+        <!-- tcp 测试 -->
+        <!-- <activity android:name=".TcpTestActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- cordova 测试 -->
+        <activity android:name=".CordovaTestActivity" >
+        </activity>
+
+
+        <!-- 百度定位 测试 -->
+        <activity android:name=".test.BaiduLocationTest" >
+        </activity>
+
+        <!-- 百度定位 start -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="WYqhVB4rhRM3BM1qkzjGd1hX" />
+        <!-- 百度定位 end -->
+
+
+        <!-- umeng start -->
+        <!-- 友盟 appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55910cae67e58eedac000191" >
+        </meta-data>
+        <!--  -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" />
+        <!-- umeng end -->
+
+
+        <!-- alibaba -->
+        <!-- 聊天窗口 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxChattingActvity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ChattingDetailStyle_default"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 最近会话列表 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.WxConversationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+
+        <!-- 多图查看窗口 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:theme="@style/Aliwx_ContentOverlay_default"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alibaba.mobileim.kit.imageviewer.ShowImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ContentOverlay_default"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+
+        <!-- 漫游密码输入，三方用户不需要这个Activity -->
+        <activity
+            android:name="com.alibaba.mobileim.kit.CloudPwdSettingHintActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+
+        <!-- 交易组件跳转窗口，即点击旺旺水滴跳OpenIM窗口 -->
+        <activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity" />
+
+        <!-- @消息相关 -->
+        <activity
+            android:name="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        <activity
+            android:name="com.alibaba.mobileim.ui.atmessage.SendAtMessageDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default" />
+        <activity
+            android:name="com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Aliwx_ConverationStyle_default"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.alibaba.tcms.service.MonitorActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:process=":TcmsService"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- 故障诊断 -->
+        <service
+            android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService"
+            android:exported="false" >
+        </service>
+
+        <!-- 数据通道 -->
+        <service
+            android:name="com.alibaba.tcms.service.TCMSService"
+            android:exported="true"
+            android:process=":TcmsService" >
+        </service>
+
+        <!-- 用于接收从TCMSService发送的命令 -->
+        <service
+            android:name="com.alibaba.tcms.service.ListenerService"
+            android:exported="true" >
+        </service>
+
+        <activity android:name="com.alibaba.sdk.android.webview.BaseWebViewActivity" />
+
+        <receiver
+            android:name="com.alibaba.sdk.android.hotpatch.HotPatchBroadcastReceiver"
+            android:exported="false"
+            android:process=":hotpatch" >
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.hotpatch.action.HOT_PATCH" />
+            </intent-filter>
+        </receiver>
+        
+         <!-- 通道保持服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true"
+            android:process=":channel" >
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="taobao" />
+            </intent-filter>
+        </service>
+        
+        <!-- 消息接收服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.MsgService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 连接心跳保持监听器 -->
+        <receiver android:name="anet.channel.heartbeat.HeartbeatManager$Receiver" >
+            <intent-filter>
+                <action android:name="anetwork.channel.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 消息接收监听器 -->
+        <receiver android:name="com.alibaba.sdk.android.push.MessageReceiver" >
+            <intent-filter>
+                <action android:name="com.hdzx.tenement.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.hdzx.tenement.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+                
+        
+        
+        
+        
+        
+    </application>
+
+</manifest>

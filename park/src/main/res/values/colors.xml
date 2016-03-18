@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<resources>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!--半透明-->
+    <color name="semitransparent">#e0000000</color>
+    <color name="lightgray">#1fffffff</color>
+    <!--灰色-->
+    <color name="grat">#525252</color>
+    <!--灰色-->
+    <color name="grat1">#939393</color>
+    <!--灰色 文字，下划线-->
+    <color name="grey">#ffdbdbdb</color>
+    <!--白色-->
+    <color name="white">#ffffffff</color>
+    <!--粉红色-->
+    <color name="pink">#ef6e5a</color>
+    <!--亮黄色-->
+    <color name="lightyellow">#FEF280</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--橙色-->
+    <color name="orgin">#FF8000</color>
+    <!--淡灰色-->
+    <color name="gray">#e9e7e7</color>
+
+    <color name="gray1">#e2e2e1</color>
+    <!--按钮触发颜色-->
+    <color name="butsumbit">#E36843</color>
+    <!--亮绿色-->
+    <color name="green">#4AD36A</color>
+    
+    
+    
+     <!--主体颜色-->
+    <color name="green_main">#50d2c2</color>
+    <color name="green_main1">#24BCA5</color>
+    <color name="green_main_on">#24b79e</color>
+    <!--正文颜色-->
+    <color name="text_main">#333333</color>
+    <color name="yellow_main">#f47764</color>
+    <color name="blue_main">#67a9cc</color>
+    
+</resources>

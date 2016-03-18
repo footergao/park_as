@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <include
+            layout="@layout/tenement_navitationbar"/>
+
+    <LinearLayout
+            android:layout_width="fill_parent" android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_marginTop="30dp"
+            android:padding="20dp">
+
+        <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/txt_bangbangxia"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/common_colon_ch"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="张三"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/main_mine_person_info_nick"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/common_colon_ch"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="张三"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/txt_seckill_aduit_date"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/common_colon_ch"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="2015-6-1"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/txt_seckill_valid_date"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/common_colon_ch"/>
+            <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="2016-6-1"/>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_express_service_specification"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:background="@drawable/seckill_wrap_tag"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/pink"
+                android:text="@string/txt_express_service_specification"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:padding="20dp"
+            style="?android:attr/buttonBarStyle">
+
+        <View android:id="@+id/strut"
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_centerHorizontal="true"/>
+
+        <Button
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@drawable/common_button_drawable"
+                android:layout_alignRight="@+id/strut"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:text="@string/txt_seckill_apply_revoke"/>
+
+        <Button
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="@drawable/common_button_drawable"
+                android:layout_alignLeft="@+id/strut"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:text="@string/txt_iknow"/>
+    </RelativeLayout>
+
+</LinearLayout>

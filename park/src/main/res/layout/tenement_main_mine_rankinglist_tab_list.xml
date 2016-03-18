@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent" android:layout_height="60dp">
+        <TextView
+                android:id="@+id/txt_main_mine_rankinglist_position"
+                android:text="1"
+                android:textSize="20sp"
+                android:textColor="@color/pink"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <com.hdzx.tenement.widget.CircleImageView
+                android:id="@+id/img_main_mine_rankinglist_img"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/icon_express"
+                android:layout_width="30dp" android:layout_height="30dp"/>
+        <TextView
+                android:id="@+id/txt_main_mine_rankinglist_name"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="xxx"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <TextView
+                android:id="@+id/txt_main_mine_rankinglist_num"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="120"
+                android:layout_weight="1"
+                android:layout_width="0px" android:layout_height="match_parent"/>
+        <TextView
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="@string/main_mine_rankinglist_item"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

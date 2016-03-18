@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/lay_express_sendreciveinfo_address_listselect"
+            android:background="@color/white"
+            android:layout_width="match_parent" android:layout_height="60dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+            <!--地址文字-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px" android:layout_height="match_parent"
+                    android:layout_weight="8">
+                <TextView
+                        android:id="@+id/txt_express_sendreciveinfo_address_name"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:text="环湖苑第一套"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txt_express_sendreciveinfo_address_info"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:text="无锡市滨湖区xx小区xx室"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <!--选中图标-->
+            <ImageView
+                    android:id="@+id/img_express_sendreciveinfo_address_select"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_tenement_selected"
+                    android:layout_width="0px" android:layout_height="40dp"
+                    android:layout_weight="2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:background="@color/gray"
+            android:layout_width="match_parent" android:layout_height="10dp"/>
+</LinearLayout>

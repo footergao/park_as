@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+<body>
+<!--
+  The nav bar that will be updated as we navigate between views.
+-->
+<ion-nav-bar class="bar-stable">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<!--
+  The views will be rendered in the <ion-nav-view> directive below
+  Templates are in the /templates folder (but you could also
+  have templates inline in this html file if you'd like).
+-->
+<ion-nav-view>
+    <!--head-->
+    <div class="bar bar-header bar-positive">
+        <a href="#" class="button button-icon icon ion-android-arrow-back"></a>
+        <h1 class="title">Header</h1>
+        <a href="#" class="button button-icon icon ion-gear-a"></a>
+    </div>
+    <div class="bar bar-subheader">
+        <h2 class="title">Sub Header</h2>
+        <a href="#" class="button button-icon icon ion-reply"></a>
+        <a href="#" class="button button-icon icon ion-forward"></a>
+    </div>
+
+    <!--content-->
+    <button class="button button-dark">
+        button-dark
+    </button>
+    <button class="button button-block button-positive">
+        Block Button
+    </button>
+    <button class="button button-full button-positive button-outline">
+        Full Width Block Button
+    </button>
+    <!--foot-->
+    <div class="bar bar-footer">
+        <button class="button button-clear">Left</button>
+        <div class="title">Title</div>
+        <button class="button button-clear">Right</button>
+    </div>
+</ion-nav-view>
+</body>
+</html>
